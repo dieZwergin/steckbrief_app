@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:steckbrief_app/screens/second_screen.dart';
+import 'package:steckbrief_app/screens/stack_screen.dart';
+
+import 'data_screen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({Key? key}) : super(key: key);
@@ -16,18 +20,31 @@ class StartScreen extends StatelessWidget {
           child: Column(
             children: [
               Image.asset("assets/Weihnachten2018.jpg"),
+
               macheZeile(
                 text: "Alter: 25"
               ),
               macheZeile(
                   text: "Augenfarbe: blau"
               ),
-              macheZeile(),
-              macheZeile(),
-              macheZeile(),
-              macheZeile(),
-              macheZeile(),
-              macheZeile(),
+              ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SecondScreen()),
+                );
+              },
+                child: Text("Hallo!"),
+              ),
+              ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => StackScreen()),
+                );
+              },
+                child: Text("StackScreen"),
+              ),
+              ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => DataScreen()),
+                );
+              },
+                child: Text("DataScreen"),
+              ),
               macheZeile(),
             ],
           ),
