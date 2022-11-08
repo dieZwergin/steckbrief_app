@@ -9,7 +9,7 @@ class StartScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text("Eine App"),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.orange,
       ),
       body: SingleChildScrollView(
         child: Center(
